@@ -39,14 +39,19 @@
     background-image: url(../img/imagen-de-fondo.jpg);
     font-family: 'Bebas Neue';
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+    justify-content:space-between;
+   
     
     margin: 5px;
 } 
+.principal p{
+    flex: 1;
+    margin-top: 40px;
+    margin-bottom: 40px; 
+    align-items: center;
+}
 .principal img{
-    width: 25%;
-    height: 25%;
+   flex: 1;
 
 } 
 footer{
@@ -54,14 +59,17 @@ footer{
     font-family: 'Bebas Neue';
 } 
 .body{
+    max-width: auto;
+    padding: 24px;
+    margin: auto;
+    height:100vh ;
     border: 10%;
     display: grid;
-    grid-template-rows: 200px auto 300 px;
-    grid-template-columns:  auto 15%;
+    grid-template-rows: auto 1fr auto;
     grid-template-areas: 
-    " header header "
-    "  main publicidad"
-    "  footer publicidad" ;
+    " header "
+    "  main "
+    "  footer " ;
 
 } 
 .header{
@@ -73,9 +81,7 @@ footer{
 .footer{
   grid-area:footer ;
 }
-.publicidad{
-    grid-area:publicidad;
-}
+
 @media(max-width:768px){
     body{
         background-color: black;
